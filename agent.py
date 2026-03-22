@@ -41,10 +41,10 @@ async def chat():
     transcript = TranscriptWriter(transcript_file)
 
     # Load prompts
-    lead_agent_prompt = load_prompt("lead_agent.txt")
+    #lead_agent_prompt = load_prompt("lead_agent.txt")
     researcher_prompt = load_prompt("researcher.txt")
-    data_analyst_prompt = load_prompt("data_analyst.txt")
-    report_writer_prompt = load_prompt("report_writer.txt")
+    #data_analyst_prompt = load_prompt("data_analyst.txt")
+    #report_writer_prompt = load_prompt("report_writer.txt")
 
     # Initialize subagent tracker with transcript writer and session directory
     tracker = SubagentTracker(transcript_writer=transcript, session_dir=session_dir)
@@ -72,7 +72,7 @@ async def chat():
                 "a data summary to files/data/. Use this before the report-writer to add visual insights."
             ),
             tools=["Glob", "Read", "Bash", "Write"],
-            prompt=data_analyst_prompt,
+            #prompt=data_analyst_prompt,
             model="haiku"
         ),
         "report-writer": AgentDefinition(
@@ -85,7 +85,7 @@ async def chat():
                 "Does NOT conduct web searches - only reads existing research notes and creates PDF reports."
             ),
             tools=["Skill", "Write", "Glob", "Read", "Bash"],
-            prompt=report_writer_prompt,
+            #prompt=report_writer_prompt,
             model="haiku"
         )
     }
