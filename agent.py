@@ -41,7 +41,7 @@ async def chat():
     transcript = TranscriptWriter(transcript_file)
 
     # Load prompts
-    #lead_agent_prompt = load_prompt("lead_agent.txt")
+    lead_agent_prompt = load_prompt("lead_agent.txt")
     researcher_prompt = load_prompt("researcher.txt")
     #data_analyst_prompt = load_prompt("data_analyst.txt")
     #report_writer_prompt = load_prompt("report_writer.txt")
