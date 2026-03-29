@@ -14,7 +14,7 @@ from research_agent.utils.message_handler import process_assistant_message
 load_dotenv()
 
 # Paths to prompt files
-PROMPTS_DIR = Path(__file__).parent / "prompts"
+PROMPTS_DIR = Path(__file__).parent / "research_agent" / "prompts"
 
 
 def load_prompt(filename: str) -> str:
@@ -62,32 +62,33 @@ async def chat():
             tools=["WebSearch", "Write"],
             prompt=researcher_prompt,
             model="haiku"
-        ),
-        "data-analyst": AgentDefinition(
-            description=(
-                "Use this agent AFTER researchers have completed their work to generate quantitative "
-                "analysis and visualizations. The data-analyst reads research notes from files/research_notes/, "
-                "extracts numerical data (percentages, rankings, trends, comparisons), and generates "
-                "charts using Python/matplotlib via Bash. Saves charts to files/charts/ and writes "
-                "a data summary to files/data/. Use this before the report-writer to add visual insights."
-            ),
-            tools=["Glob", "Read", "Bash", "Write"],
-            #prompt=data_analyst_prompt,
-            model="haiku"
-        ),
-        "report-writer": AgentDefinition(
-            description=(
-                "Use this agent when you need to create a formal research report document. "
-                "The report-writer reads research findings from files/research_notes/, data analysis "
-                "from files/data/, and charts from files/charts/, then synthesizes them into clear, "
-                "concise, professionally formatted PDF reports in files/reports/ using reportlab. "
-                "Ideal for creating structured documents with proper citations, data, and embedded visuals. "
-                "Does NOT conduct web searches - only reads existing research notes and creates PDF reports."
-            ),
-            tools=["Skill", "Write", "Glob", "Read", "Bash"],
-            #prompt=report_writer_prompt,
-            model="haiku"
         )
+        # ,
+        # "data-analyst": AgentDefinition(
+        #     description=(
+        #         "Use this agent AFTER researchers have completed their work to generate quantitative "
+        #         "analysis and visualizations. The data-analyst reads research notes from files/research_notes/, "
+        #         "extracts numerical data (percentages, rankings, trends, comparisons), and generates "
+        #         "charts using Python/matplotlib via Bash. Saves charts to files/charts/ and writes "
+        #         "a data summary to files/data/. Use this before the report-writer to add visual insights."
+        #     ),
+        #     tools=["Glob", "Read", "Bash", "Write"],
+        #     #prompt=data_analyst_prompt,
+        #     model="haiku"
+        # ),
+        # "report-writer": AgentDefinition(
+        #     description=(
+        #         "Use this agent when you need to create a formal research report document. "
+        #         "The report-writer reads research findings from files/research_notes/, data analysis "
+        #         "from files/data/, and charts from files/charts/, then synthesizes them into clear, "
+        #         "concise, professionally formatted PDF reports in files/reports/ using reportlab. "
+        #         "Ideal for creating structured documents with proper citations, data, and embedded visuals. "
+        #         "Does NOT conduct web searches - only reads existing research notes and creates PDF reports."
+        #     ),
+        #     tools=["Skill", "Write", "Glob", "Read", "Bash"],
+        #     #prompt=report_writer_prompt,
+        #     model="haiku"
+        # )
     }
 
     # Set up hooks for tracking

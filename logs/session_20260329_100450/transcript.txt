@@ -1,0 +1,159 @@
+
+You: Can you provide me an analysis of the IPL March between RCB and SRH yesterday
+
+Agent: Breaking this into 4 research areas: match scorecard/summary, key player performances, team strategy/tactical analysis, and turning points/highlights. Spawning researchers now.
+[MAIN AGENT] → Agent    Input: spawn=researcher (RCB vs SRH scorecard and summary)
+
+[MAIN AGENT] → Agent    Input: spawn=researcher (Player performance analysis)
+
+[MAIN AGENT] → Agent    Input: spawn=researcher (Team strategy and tactical decisions)
+
+[MAIN AGENT] → Agent    Input: spawn=researcher (Match turning points and dynamics)
+
+[MAIN AGENT] → WebSearch    Input: query='RCB vs SRH IPL March 28 2026 match result score'
+
+[MAIN AGENT] → WebSearch    Input: query='RCB vs SRH IPL match March 28 2026 player performances scores'
+
+[MAIN AGENT] → WebSearch    Input: query='Royal Challengers Bangalore Sunrisers Hyderabad March 28 2026 final score'
+
+[MAIN AGENT] → WebSearch    Input: query='RCB vs SRH March 28 2026 IPL batsmen scores runs'
+
+[MAIN AGENT] → WebSearch    Input: query='IPL 2026 RCB SRH batting bowling statistics 28 March'
+
+[MAIN AGENT] → WebSearch    Input: query='"RCB vs SRH" "March 28" 2026 wickets runs overs'
+
+[MAIN AGENT] → WebSearch    Input: query='SRH vs RCB IPL 2026 March 28 bowlers wickets economy rate'
+
+[MAIN AGENT] → WebSearch    Input: query='RCB vs SRH March 28 2026 match analysis strategy'
+
+[MAIN AGENT] → WebSearch    Input: query='IPL match RCB Sunrisers Hyderabad 2026-03-28 toss details'
+
+[MAIN AGENT] → WebSearch    Input: query='RCB SRH March 28 2026 team composition batting order'
+
+[MAIN AGENT] → WebSearch    Input: query='"RCB" "SRH" "28 March 2026" OR "March 28 2026" IPL match scorecard'
+
+[MAIN AGENT] → WebSearch    Input: query='RCB vs SRH March 28 2026 bowling strategy field placement'
+
+[MAIN AGENT] → WebSearch    Input: query='RCB SRH IPL match 28 March 2026 highlights player milestones'
+
+[MAIN AGENT] → WebSearch    Input: query='RCB SRH March 28 2026 powerplay phase death overs tactics'
+
+[MAIN AGENT] → WebSearch    Input: query='RCB vs SRH March 28 2026 match report'
+
+[MAIN AGENT] → WebSearch    Input: query='"RCB vs SRH" "28 March 2026" captain decisions tactical analysis'
+
+[MAIN AGENT] → WebSearch    Input: query='RCB SRH March 28 2026 critical moments turning points'
+
+[MAIN AGENT] → WebSearch    Input: query='RCB vs Sunrisers Hyderabad 28 March 2026 dismissals partnerships'
+
+[MAIN AGENT] → WebSearch    Input: query='"RCB" "SRH" "28 March 2026" momentum shifts key moments'
+
+[MAIN AGENT] → WebSearch    Input: query='Royal Challengers Bangalore Sunrisers Hyderabad March 28 2026 rain delay'
+
+[MAIN AGENT] → WebSearch    Input: query='RCB vs SRH March 28 2026 scorecard runs wickets economy rates'
+
+[MAIN AGENT] → WebSearch    Input: query='"Jacob Duffy" RCB SRH March 28 2026 bowling figures maiden IPL'
+
+[MAIN AGENT] → WebSearch    Input: query='RCB SRH March 28 2026 Devdutt Padikkal Virat Kohli performance runs'
+
+[MAIN AGENT] → WebSearch    Input: query='RCB SRH March 28 2026 Ishan Kishan 80 runs partnerships Klaasen'
+
+[MAIN AGENT] → WebSearch    Input: query='"Jacob Duffy" 3 wickets RCB vs SRH March 28 2026 powerplay'
+
+[MAIN AGENT] → WebSearch    Input: query='RCB vs SRH March 28 2026 Devdutt Padikkal 61 runs Virat Kohli 69 second wicket partnership'
+
+[MAIN AGENT] → WebSearch    Input: query='RCB SRH IPL 2026 Match 1 controversial decisions umpire calls DRS'
+
+[MAIN AGENT] → Write    Input: file='RCB_vs_SRH_IPL_2026_Match_Report.md' (4601 chars)
+
+[MAIN AGENT] → WebSearch    Input: query='Jacob Duffy RCB vs SRH 3/22 bowling figures economy IPL March 28 2026'
+
+[MAIN AGENT] → WebSearch    Input: query='Devdutt Padikkal 61 runs RCB vs SRH IPL 2026 fastest fifty balls'
+
+[MAIN AGENT] → WebSearch    Input: query='Ishan Kishan 80 runs debut captain SRH vs RCB March 28 2026 IPL'
+
+[MAIN AGENT] → Write    Input: file='RCB_vs_SRH_March28_2026_Tactical_Analysis.md' (16645 chars)
+
+[MAIN AGENT] → Write    Input: file='rcb_vs_srh_ipl_march_28_2026_player_performances.md' (10272 chars)
+
+[MAIN AGENT] → Write    Input: file='rcb_vs_srh_match_march_28_2026_critical_moments.md' (13386 chars)
+
+All researchers complete. Spawning data-analyst to extract stats and generate charts.
+[MAIN AGENT] → Agent    Input: spawn=general-purpose (Generate charts and quantitative analysis)
+
+[MAIN AGENT] → Bash    Input: {'command': 'find /Users/debrajmajumdar/Documents/GENERATIVEAI/research-agent/files/research_notes -
+
+[MAIN AGENT] → Read    Input: path='/Users/debrajmajumdar/Documents/GENERATIVEAI/research-agent/files/research_notes/RCB_vs_SRH_March28_2026_Tactical_Analysis.md'
+
+[MAIN AGENT] → Read    Input: path='/Users/debrajmajumdar/Documents/GENERATIVEAI/research-agent/files/research_notes/rcb_vs_srh_ipl_march_28_2026_player_performances.md'
+
+[MAIN AGENT] → Read    Input: path='/Users/debrajmajumdar/Documents/GENERATIVEAI/research-agent/files/research_notes/RCB_vs_SRH_IPL_2026_Match_Report.md'
+
+[MAIN AGENT] → Read    Input: path='/Users/debrajmajumdar/Documents/GENERATIVEAI/research-agent/files/research_notes/rcb_vs_srh_match_march_28_2026_critical_moments.md'
+
+[MAIN AGENT] → Bash    Input: {'command': 'mkdir -p /Users/debrajmajumdar/Documents/GENERATIVEAI/research-agent/files/charts /User
+
+[MAIN AGENT] → Write    Input: file='generate_match_analysis.py' (42734 chars)
+
+[MAIN AGENT] → Bash    Input: {'command': 'python3 generate_match_analysis.py'}
+
+[MAIN AGENT] → Bash    Input: {'command': 'pip install matplotlib pandas numpy -q'}
+
+[MAIN AGENT] → Bash    Input: {'command': 'python3 -m pip install matplotlib pandas numpy -q'}
+
+[MAIN AGENT] → Bash    Input: {'command': 'python3 generate_match_analysis.py'}
+
+[MAIN AGENT] → Edit    Input: path='/Users/debrajmajumdar/Documents/GENERATIVEAI/research-agent/generate_match_analysis.py'
+
+[MAIN AGENT] → Bash    Input: {'command': 'python3 generate_match_analysis.py 2>&1 | tail -30'}
+
+[MAIN AGENT] → Bash    Input: {'command': 'ls -lh /Users/debrajmajumdar/Documents/GENERATIVEAI/research-agent/files/charts/ && ech
+
+[MAIN AGENT] → Read    Input: path='/Users/debrajmajumdar/Documents/GENERATIVEAI/research-agent/files/data/match_statistics_summary.md'
+
+[MAIN AGENT] → Bash    Input: {'command': 'wc -l /Users/debrajmajumdar/Documents/GENERATIVEAI/research-agent/files/data/match_stat
+
+[MAIN AGENT] → Bash    Input: {'command': 'cat > /Users/debrajmajumdar/Documents/GENERATIVEAI/research-agent/files/ANALYSIS_REPORT
+
+[MAIN AGENT] → Bash    Input: {'command': 'rm /Users/debrajmajumdar/Documents/GENERATIVEAI/research-agent/generate_match_analysis.
+
+[MAIN AGENT] → Bash    Input: {'command': 'echo "=== FINAL ANALYSIS SUMMARY ===" && echo "" && echo "CHARTS GENERATED:" && ls -1 /
+
+[MAIN AGENT] → Read    Input: path='/Users/debrajmajumdar/Documents/GENERATIVEAI/research-agent/files/data/match_statistics_summary.md'
+
+[MAIN AGENT] → Bash    Input: {'command': "cat > /tmp/final_summary.txt << 'EOF'\n================================================
+
+Data analysis complete with 5 charts and detailed statistics. Spawning report-writer for final synthesis.
+[MAIN AGENT] → Agent    Input: spawn=general-purpose (Create comprehensive match analysis report)
+
+[MAIN AGENT] → Glob    Input: pattern='files/research_notes/**'
+
+[MAIN AGENT] → Glob    Input: pattern='files/charts/**'
+
+[MAIN AGENT] → Read    Input: path='/Users/debrajmajumdar/Documents/GENERATIVEAI/research-agent/files/data/match_statistics_summary.md'
+
+[MAIN AGENT] → Read    Input: path='/Users/debrajmajumdar/Documents/GENERATIVEAI/research-agent/files/research_notes/RCB_vs_SRH_IPL_2026_Match_Report.md'
+
+[MAIN AGENT] → Read    Input: path='/Users/debrajmajumdar/Documents/GENERATIVEAI/research-agent/files/research_notes/RCB_vs_SRH_March28_2026_Tactical_Analysis.md'
+
+[MAIN AGENT] → Read    Input: path='/Users/debrajmajumdar/Documents/GENERATIVEAI/research-agent/files/research_notes/rcb_vs_srh_ipl_march_28_2026_player_performances.md'
+
+[MAIN AGENT] → Read    Input: path='/Users/debrajmajumdar/Documents/GENERATIVEAI/research-agent/files/research_notes/rcb_vs_srh_match_march_28_2026_critical_moments.md'
+
+[MAIN AGENT] → Write    Input: file='RCB_vs_SRH_IPL_2026_Match_Analysis_Report.md' (43958 chars)
+
+[MAIN AGENT] → Bash    Input: {'command': 'ls -lh /Users/debrajmajumdar/Documents/GENERATIVEAI/research-agent/files/reports/ | gre
+
+[MAIN AGENT] → Bash    Input: {'command': 'head -100 /Users/debrajmajumdar/Documents/GENERATIVEAI/research-agent/files/reports/RCB
+
+Research complete. Comprehensive IPL match analysis report saved to:
+**`files/reports/RCB_vs_SRH_IPL_2026_Match_Analysis_Report.md`**
+
+Report includes: match scorecard, player performances, tactical breakdown, 5 professional charts, turning points analysis, records, and critical assessment.
+
+You: Users/debrajmajumdar/Documents/GENERATIVEAI/research-agent/prompts
+
+Agent: What would you like me to do with the prompts directory? Read files, explore structure, or something else?
+
+
+Goodbye!
